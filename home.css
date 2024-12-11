@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Resetting margin and padding for all elements and applying a global font-family */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for the main header section */
+.header {
+    height: 290vh; /* Height set to span multiple viewports */
+    width: 100%;  /* Full width of the viewport */                    
+    background: #000; /* Black background */
+    color: #fff; /* White text color */
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-between; /* Space between logo and navigation links */
+    align-items: center; /* Center items vertically */
+    position: relative;
+    z-index: 1; /* Ensures navigation stays on top */
+}
+
+/* Styling for the logo text */
+.logo {
+    text-decoration: none; /* Removes underline */
+    color: #090303; /* Dark color for the logo */
+    font-size: 20px; /* Font size for logo */
+    font-weight: bold; /* Bold font for emphasis */
+    padding-top: 10px;
+    padding-left: 5%; /* Spacing from the left edge */
+}
+
+/* Navigation links container styling */
+.nav-links {
+    text-align: right; /* Aligns content to the right */
+    background: #FF69B4; /* Pink background for navigation links */
+    padding: 10px 30px; /* Padding inside the container */
+    border-bottom-left-radius: 18px; /* Rounded bottom-left corners */
+}
+
+/* List items within the navigation links */
+.nav-links ul li {
+    list-style: none; /* Removes bullet points */
+    display: inline-block; /* Inline layout */
+    padding: 10px 25px; /* Padding for spacing */
+}
+
+/* Individual navigation link styling */
+.nav-links ul li a {
+    color: #000; /* Black text color */
+    text-decoration: none; /* Removes underline */
+    font-size: 18px; /* Font size */
+    transition: 0.5s ea; /* Smooth transition effect */
+}
+
+/* Hover effect for navigation links */
+.nav-links ul li a:hover {
+    color: #000; /* Retains black color */
+}
+
+/* Left sidebar styling */
+.left-sidebar {
+    width: 20%; /* Sidebar width as 20% of the viewport */
+    height: 270vh; /* Height to span multiple viewports */
+    position: absolute; /* Positioned relative to its container */
+    left: 0;
+    top: 0;
+    background: #FF69B4; /* Pink background */
+    border-bottom-right-radius: 35%; /* Rounded bottom-right corners */
+    border-top-right-radius: 35%; /* Rounded top-right corners */
+}
+
+/* Row container styling */
+.row {
+    padding: 0 10%; /* Horizontal padding */
+    display: flex; /* Flexbox for layout */
+    align-items: flex-end; /* Align items to the bottom */
+    justify-content: space-between; /* Space between elements */
+    position: relative;
+    margin-top: 5%; /* Top margin for spacing */
+}
+
+/* Left column styling */
+.left-col {
+    flex-basis: 40%; /* 40% width of the row */
+}
+
+/* Image styling within the left column */
+.left-col img {
+    width: 300px; /* Fixed width for the image */
+    cursor: pointer; /* Pointer cursor on hover */
+    bottom: 72rem; /* Positioned relative to its container */
+    margin-right: 30%; /* Right margin for spacing */
+    position: relative;
+    border-radius: 10%; /* Rounded corners */
+    transition: filter 1s, transform 0.5s; /* Smooth transition effects */
+}
+
+/* Hover effect for the image */
+.left-col img:hover {  
+    transform: translateY(-8px); /* Moves the image upwards */
+}
+
+/* Right column styling */
+.right-col {
+    flex-basis: 55%; /* 55% width of the row */
+    margin-left: 50px; /* Left margin for spacing */
+}
+
+/* Header (h1) styling within the right column */
+.right-col h1 {
+    font-size: 55px; /* Large font size */
+    font-weight: 600; /* Semi-bold font weight */
+    text-align: 10px; /* Improper alignment property (ignored) */
+    padding: 10px; /* Padding around the text */
+}
+
+/* Paragraph styling within the right column */
+.right-col p {
+    color: #777; /* Gray text color */
+    margin: 20px 0 70px; /* Margins for spacing */
+}
+
+/* Social media icon container styling */
+.social-icon {
+    display: flex; /* Flexbox for horizontal layout */
+    margin-top: 30px; /* Top margin for spacing */
+}
+
+/* Individual social media icon styling */
+.social-icon .icon {
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    background: transparent; /* Transparent background */
+    border-radius: 50%; /* Circular shape */
+    display: flex; /* Flexbox for centering */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 100px; /* Right margin for spacing */
+    margin-bottom: 20px; /* Bottom margin */
+    overflow: hidden; /* Clips content outside the bounds */
+    transition: transform 0.5s; /* Smooth transition effect */
+}
+
+/* Social media icon image styling */
+.icon img {
+    width: 28px; /* Fixed width */
+}
+
+/* Anchor link styling within social media icons */
+.icon a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #255f99; /* Blue background */
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    transition: transform 0.5s; /* Smooth transition */
+}
+
+/* Hover effect for anchor links */
+.icon a:hover {
+    opacity: -1; /* Incorrect value, does not affect opacity */
+    background: white; /* White background on hover */
+}
+
+/* Hover effect for social media icons */
+.icon:hover {
+    transform: translateY(-5px); /* Moves the icon upwards */
+    background-color: #fff; /* White background */
+}
+
+/* Container styling for text and video */
+.container {
+    padding: 10px; /* Padding inside the container */
+    font-size: 20px; /* Font size */
+    text-align: justify; /* Justified text alignment */
+    top: 100%; /* Positioned relative to its container */
+}
+
+/* Header (h1) styling within the container */
+.container h1 {
+    margin-top: 15%; /* Top margin for spacing */
+    text-align: justify; /* Justified text alignment */
+    color: #fff; /* White text color */
+}
+
+/* Paragraph styling within the container */
+.container p {
+    color: #fff; /* White text color */
+}
+
+/* Styling for the main text section */
+.main-text {
+    position: relative;
+    margin-right: 0%;
+    font-size: 30px; /* Font size */
+    margin-top: 10%; /* Top margin for spacing */
+    text-align: justify; /* Justified text alignment */
+}
+
+/* Video styling within the main text section */
+.main-text video {
+    width: 100%; /* Full width */
+    height: 70%; /* Fixed height */
+    margin-top: 15%; /* Top margin for spacing */
+}
+
+/* Skills column styling */
+.skils col {
+    align-items: center; /* Align items to the center */
+}
+
+/* Likes column styling */
+.likes col {
+    position: center; /* Incorrect value, does not affect positioning */
+    margin-right: 10%; /* Right margin for spacing */
+    margin-top: 20%; /* Top margin for spacing */
+    align-items: center; /* Align items to the center */
+}
+
+/* Footer styling */
+footer {
+    padding: 10px; /* Padding inside the footer */
+    font-size: 15px; /* Font size */
+    margin-top: 28%; /* Top margin for spacing */
+    margin-left: 2rem; /* Left margin */
+    color: beige; /* Beige text color */
+}
+
+/* Responsive Design */
+
+/* For screens smaller than 480px (Phones) */
+@media (max-width: 480px) {
+    .header {
+        height: auto; /* Adjusts to content height */
+    }
+
+    .logo {
+        font-size: 16px; /* Reduces logo font size */
+        padding-left: 2%; /* Adjusts spacing */
+    }
+
+    .nav-links ul li a {
+        font-size: 14px; /* Reduces link font size */
+    }
+
+    .left-sidebar {
+        width: 100%; /* Makes sidebar span full width */
+        height: auto; /* Adjust dynamically */
+        border-radius: 0; /* Removes border rounding */
+    }
+
+    .left-col img {
+        width: 100%; /* Full width for smaller screens */
+        margin-right: 0; /* Centers image */
+    }
+
+    .right-col h1 {
+        font-size: 24px; /* Smaller heading */
+    }
+
+    .right-col p {
+        font-size: 16px; /* Adjust paragraph size */
+    }
+
+    .social-icon .icon {
+        width: 60px; /* Further reduces icon size */
+        height: 60px;
+    }
+
+    .icon img {
+        width: 20px; /* Adjusts icon size */
+    }
+
+    .main-text video {
+        height: auto; /* Adjust height dynamically */
+    }
+
+    footer {
+        font-size: 12px; /* Reduces footer text size */
+        margin-top: 10%; /* Adjusts spacing */
+    }
+}
+}

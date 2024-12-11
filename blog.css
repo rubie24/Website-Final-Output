@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset margins and paddings for all elements and set the default font */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for the header section */
+header{  
+  width: 100%;
+  position: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Container styling for centered text and layout */
+.container{
+  text-align: center;
+  right: 95%;              
+  position: space-between;
+  margin-top: 10%;
+  margin-left: 30px;
+  margin-right: 30px;/* Responsive Design */
+
+  /* General responsiveness for all smaller screens */
+  @media (max-width: 1024px) {
+    .container {
+      margin-top: 5%;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .container h2, h3 {
+      font-size: 40px;
+      margin-top: 10%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  
+    .container img {
+      max-width: 90%; /* Ensure images scale to fit smaller screens */
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .nav-links ul li {
+      padding: 5px 15px;
+    }
+  
+    .nav-links ul li a {
+      font-size: 16px;
+    }
+  
+    .waviy {
+      font-size: 100px;
+    }
+  
+    .border p {
+      max-width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      font-size: 18px;
+    }
+  }
+  color: beige;
+}
+
+/* Heading styles inside the container */
+.container h2, h3{
+  font-size: 50px;
+  margin-top: 30%;  
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  row-gap: 20px;
+}
+
+/* Image styling inside the container */
+.container img{
+  max-width: 700px;
+  position: center;
+  margin-top: 10%;
+  align-items: center;
+  border-radius: 20px;  
+  margin-left: 30px;
+  margin-right: 30px;
+  cursor: pointer;
+}   
+
+/* Body styling with complex background animations */
+body {
+  height: 800vh;                
+  background-size: 400%, 400%
+  conic-gradient(at var(--m) calc(var(--s)*0.5777), transparent 270deg, #000 0deg),
+  conic-gradient(at calc(100% - var(--m)) calc(var(--s)*0.5777), #000 90deg,  transparent 0deg),
+  conic-gradient(from -60deg at 50% calc(var(--s)*0.8662)             , var(--v1)),
+  conic-gradient(from -60deg at 50% calc(var(--s)*0.8662 + 2*var(--m)), var(--v2)),
+  conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 + 3*var(--m)), var(--v1)),
+  conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 +   var(--m)), var(--v2)),
+  linear-gradient(90deg, #fff calc(50% - var(--m)),#000 0 calc(50% + var(--m)), #fff 0);
+  background-size: calc(var(--s) + 2*var(--m)) calc(var(--s)*1.732 + 3*var(--m)); 
+  mix-blend-mode:lighten;
+}
+
+/* Gradient animation effect on the HTML background */
+html:before {
+  content: "";
+  position: absolute;      
+  inset: 0;
+  background:linear-gradient(90deg,black,#FF69B4) left/100% 10%;
+  animation:f 4s infinite alternate linear;
+  height: 800vh;
+}
+
+/* Keyframes for gradient animation */
+@keyframes f {
+  100% {background-position:right}   
+}
+
+/* Styling for the navigation bar */
+nav{
+  display: flex;
+  justify-content: space-between;   
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Logo styling in the navigation */
+.logo
+{ 
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-left: 5%;
+}
+
+/* Navigation links styling */
+.nav-links
+{
+  text-align: right;
+  padding: 10px 30px;
+  border-bottom-left-radius: 18px;
+}
+
+/* List styling inside navigation links */
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 10px 25px;
+}
+
+/* Styling for navigation link anchors */
+.nav-links ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.5s ea;
+}
+
+/* Hover effect for navigation links */
+.nav-links ul li a:hover
+{                            
+  color: #FF69B4;
+}                          
+
+/* Border and shadow effect for images */
+.border img {
+  transition: .5s ease;  
+  position: relative;
+}
+
+/* Text styling inside bordered elements */
+.border p {
+  text-align: justify;
+  position: relative  ;
+  max-width: 40%;      
+  margin-left: 25rem;
+  margin-right: 25rem;       
+  font-size: 20px;
+  color: #fff;
+}
+    
+/* Hover shadow effect for images */
+.border img:hover{
+  box-shadow: 0 0 0 5px #ffffff59;   
+  transition: .5s ease;
+}
+
+/* Animated text effect with reflection */
+.waviy {                 
+  position: relative;  
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 120px;
+  }
+
+/* Individual character animation for waviy text */
+.waviy span {
+  font-family: 'Alfa Slab One';
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 0.9s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+/* Keyframes for waviy animation */
+@keyframes waviy {
+  0%,40%,100% {                     
+  transform: translateY(0)
+  }
+  20% {
+  transform: translateY(-20px)
+  }
+}
+
+/* Gradient border effect for images */
+img {
+    --c: #fff; 
+    --b: 7px;   
+    --g: 5px;    
+  
+    padding: calc(var(--g) + var(--b));
+    --_g: #0000 25%,var(--c) 0;
+    background: 
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+       var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+      conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+       0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+    transition: .3s, background-position .3s .3s;
+    cursor: pointer;
+}
+
+/* Hover effect for gradient border */
+img:hover {
+  --_i: 100%;
+  transition: .3s, background-size .3s .3s;    
+} 
+
+/* Image opacity transition effect */
+img{
+  opacity:0.5;
+  transition: 1s ease;
+}
+    
+ img:hover{
+  opacity:1;
+  transition: 1s ease;
+}
+
+/* Footer styling */
+footer {         
+  margin-top: 31%;
+  color: #fff;
+}
